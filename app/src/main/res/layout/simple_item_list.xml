@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/cardView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="5dp"
+        app:cardCornerRadius="50dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        >
+        <ImageView
+            android:id="@+id/person_imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/no_profile_image" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/personName_textView"
+        app:layout_constraintStart_toEndOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="25dp"
+        android:text="Person Name"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        android:textColor="@color/text_color"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/show_contact_textView"
+        android:text="contact: "
+        app:layout_constraintStart_toStartOf="@id/personName_textView"
+        app:layout_constraintTop_toBottomOf="@id/personName_textView"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        android:textColor="@color/text_color"
+        />
+
+    <TextView
+        android:id="@+id/contactNum_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0000000000"
+        android:textColor="@color/blue"
+        app:layout_constraintBottom_toBottomOf="@+id/show_contact_textView"
+        app:layout_constraintStart_toEndOf="@id/show_contact_textView"
+        android:layout_marginStart="6dp"/>
+
+    <ImageButton
+        android:id="@+id/goto_imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:background="@color/invisible"
+        android:clickable="true"
+        android:contentDescription="goto contact"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:src="@drawable/baseline_arrow_forward_ios_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
